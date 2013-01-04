@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:weightSum="100" android:padding="5dp">
+    
+    <com.joravasal.keyface.FindFacesView android:id="@+id/ffV" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="15"></com.joravasal.keyface.FindFacesView>
+    
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="2" android:orientation="vertical" android:layout_weight="85">
+        <Button android:id="@+id/newFaceButton" android:text="Add new face" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"></Button>
+        <Button android:id="@+id/changeCameraButton" android:text="Change camera" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"></Button>
+    </LinearLayout>
+</LinearLayout>

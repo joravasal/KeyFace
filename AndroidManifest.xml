@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.joravasal.keyface" android:versionCode="1"
+	android:versionName="0.8">
+	<uses-sdk android:minSdkVersion="10"/>
+
+    <supports-screens android:resizeable="true"
+                      android:smallScreens="true" 
+                      android:normalScreens="true" 
+                      android:largeScreens="true" 
+                      android:anyDensity="true" />
+                      
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+
+	<application android:icon="@drawable/icon" android:label="@string/app_name" android:debuggable="true">
+		<activity android:name=".KeyFaceActivity" android:label="@string/app_name" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".AddNameActivity" android:label="@string/app_name" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.joravasal.keyface.ADDNAME" /> 
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".EigenFacesActivity" android:label="@string/app_name"
+			android:theme="@android:style/Theme.Dialog" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.joravasal.keyface.EIGENFACES" /> 
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".About" android:label="@string/app_name"
+			android:theme="@android:style/Theme.Dialog" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.joravasal.keyface.ABOUT" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".Preferences" android:label="@string/app_name"
+			android:theme="@android:style/Theme.Dialog" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.joravasal.keyface.PREFERENCES" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+
+	</application>
+</manifest>

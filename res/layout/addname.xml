@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:weightSum="1">
+  
+    <TextView android:text="Give a name to the photo:" android:id="@+id/instructionsTV" android:layout_height="wrap_content" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge"></TextView>
+    
+    <EditText android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/newNameET">
+        <requestFocus></requestFocus>
+    </EditText>
+    <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:weightSum="2">
+        <Button android:layout_height="wrap_content" android:text="Save" android:layout_width="wrap_content" android:id="@+id/saveB" android:layout_weight="1"></Button>
+        <Button android:layout_height="wrap_content" android:text="Cancel" android:layout_width="wrap_content" android:id="@+id/cancelB" android:layout_weight="1"></Button>
+    </LinearLayout>
+    <LinearLayout
+  		android:id="@+id/addNameMainLinearLayout"
+  		android:orientation="vertical"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content" android:weightSum="1" android:layout_gravity="center_horizontal">
+  	</LinearLayout>
+</LinearLayout>

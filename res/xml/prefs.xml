@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="General options">
+		<CheckBoxPreference android:summaryOff="Front camera is the default."
+			android:key="defCamera" android:title="Default Camera"
+			android:summaryOn="Rear camera is the default." android:defaultValue="true" />
+			
+		<CheckBoxPreference android:summaryOff="The FPS data will not be shown."
+			android:title="Show FPS data" android:key="fpsMeter"
+			android:summaryOn="The FPS data will be shown." android:defaultValue="true" />
+			
+		<CheckBoxPreference android:title="Show more info" android:key="showData" android:defaultValue="true"
+		android:summaryOn="Some extra information on the algorithm being used will be shown."
+		android:summaryOff="No information on the algorithm will be shown."></CheckBoxPreference>
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="Variables values">
+		<EditTextPreference android:title="Size of saved faces" android:key="savedFaceSize" android:defaultValue="200"
+		android:inputType="numberDecimal" android:summary="Size in pixels (200 recommended)."/>
+		
+		<EditTextPreference android:key="faceSize" android:summary="Values between 0 and 1, not including those. Needs restart."
+		android:defaultValue="0.3" android:inputType="numberDecimal" android:title="Minimum Face Size"/>
+	
+		<ListPreference android:entryValues="@array/prefAlgDistValues" android:entries="@array/prefAlgDistLabels" android:dialogTitle="Distance algorithm" android:title="Distance algorithm" android:summary="Defines which method is used to calculate the distance of faces" android:key="distAlgPref" android:defaultValue='"1"'></ListPreference><EditTextPreference android:title="Threshold for PCA" android:key="threshold" android:defaultValue="50"
+		android:summary="Which value is used to decide a face is or isn't known. (*10exp5)" android:inputType="numberDecimal"></EditTextPreference>
+		
+		<Preference android:summary="Will erase all the data saved by this app (photos, names...)"
+		android:title="Delete data" android:key="deleteData" android:enabled="true"/>
+		
+	</PreferenceCategory>
+</PreferenceScreen>

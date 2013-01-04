@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KeyFace</string>
+    <string name="author">Jorge Avalos Salguero</string>
+    <string name="email">joravasal@gmail.com</string>
+    <string name="app_dir">KeyFace</string>
+</resources>
